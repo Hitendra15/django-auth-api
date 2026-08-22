@@ -1,0 +1,91 @@
+{
+  "info": {
+    "_postman_id": "cd394e78-5125-4def-bfba-ac30e4bedb06",
+    "name": "DJANGO AUTH API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36534458"
+  },
+  "item": [
+    {
+      "name": "USER REGISTER API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "USER LOGIN API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "USER PROFILE API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "USER CHANGEPASSWORD API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "USER RESET PASSWORD EMAIL SEND API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "USER RESET PASSWORD DONE API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\":\"root\",\r\n    \"password2\":\"root\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/reset-password-done/NQ/ddptc9-a7f458f51814f7f21d44967c682a7575",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "reset-password-done",
+            "NQ",
+            "ddptc9-a7f458f51814f7f21d44967c682a7575"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
