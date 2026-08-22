@@ -20,7 +20,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenVerifyView,
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/',include('accounts.urls')),
+    path('api/user/',include('accounts.urls')),
     path('gettoken/',TokenObtainPairView.as_view(),name="gettoken"),
     path('verifytoken/',TokenVerifyView.as_view(),name="verifytoken"),
     path('refreshtoken/',TokenRefreshView.as_view(),name="refreshtoken"),
