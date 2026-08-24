@@ -1,0 +1,269 @@
+{
+  "info": {
+    "_postman_id": "e8f5fd71-7a29-49a9-81b9-109f3f8fe0d4",
+    "name": "DJANGO AUTH API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36534458"
+  },
+  "item": [
+    {
+      "name": "USER REGISTER API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test@yopmail.com\",\r\n    \"name\": \"Hitendra Marathe\",\r\n    \"password\": \"superuser\",\r\n    \"password2\": \"superuser\",\r\n    \"tc\": \"True\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/register",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER LOGIN API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test@yopmail.com\",\r\n    \"password\": \"superuser\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER PROFILE API",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg3NDkxMjI2LCJpYXQiOjE3ODc0ODk0MjYsImp0aSI6Ijk2NjZjODUwMmRlNjQ0OTRiYmIzOWIwYTA2NmNlMjkzIiwidXNlcl9pZCI6IjcifQ.KE_hymH3Vaj4ujTOU8TiGS7sv6y63JHCB0WmXz9Z6Qw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/profile",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER CHANGEPASSWORD API",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg3NDkxMjI2LCJpYXQiOjE3ODc0ODk0MjYsImp0aSI6Ijk2NjZjODUwMmRlNjQ0OTRiYmIzOWIwYTA2NmNlMjkzIiwidXNlcl9pZCI6IjcifQ.KE_hymH3Vaj4ujTOU8TiGS7sv6y63JHCB0WmXz9Z6Qw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\": \"root\",\r\n    \"password2\": \"root\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/changepassword",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "changepassword"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER RESET PASSWORD EMAIL SEND API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test@yopmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/send-reset-password",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "send-reset-password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER RESET PASSWORD DONE API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\":\"root\",\r\n    \"password2\":\"root\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/user/reset-password-done/Nw/dds0dd-2744000f0610fa1839eb4be4805cf9d4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "user",
+            "reset-password-done",
+            "Nw",
+            "dds0dd-2744000f0610fa1839eb4be4805cf9d4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

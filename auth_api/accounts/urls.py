@@ -1,11 +1,11 @@
 from django.urls import path,include
 from . import views
-from rest_framework.routers import DefaultRouter
-
-router = DefaultRouter()
-
-router.register('registration',views.UserRegisterView,basename='registration')
 
 urlpatterns = [
-    path('',include(router.urls)),
+    path('register',views.UserRegistrationView.as_view(),name="register"),
+    path('login',views.UserLoginView.as_view(),name="login"),
+    path('profile',views.UserProfileView.as_view(),name="profile"),
+    path('changepassword',views.UserChangePasswordView.as_view(),name="changepassword"),
+    path('send-reset-password',views.UserResetPasswordView.as_view(),name="resetpassword"),
+    path('reset-password-done/<uid>/<token>',views.UserResetPasswordDoneView.as_view(),name="resetpassworddone"),
 ]
