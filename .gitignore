@@ -154,7 +154,7 @@ auth_api/.env
 .envrc
 .venv
 env/
-venv/
+.venv/
 ENV/
 env.bak/
 venv.bak/
