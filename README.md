@@ -103,8 +103,10 @@ django-auth-api/
 │   │
 │   ├── 📁 accounts/
 │   │   ├── 📁 migrations/
+│   │   ├── 📄 admin.py
 │   │   ├── 📄 managers.py
 │   │   ├── 📄 models.py
+│   │   ├── 📄 renderers.py
 │   │   ├── 📄 serializers.py
 │   │   ├── 📄 views.py
 │   │   └── 📄 urls.py
@@ -112,10 +114,12 @@ django-auth-api/
 │   ├── 📁 auth_api/
 │   │   ├── 📄 settings.py
 │   │   ├── 📄 urls.py
+│   │   ├── 📄 utility.py
 │   │   ├── 📄 asgi.py
 │   │   └── 📄 wsgi.py
 │   │
 │   ├── 🔒 .env
+│   ├── 🔒 .env.example
 │   └── 📄 manage.py
 │
 ├── 🚫 .gitignore
